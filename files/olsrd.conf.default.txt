@@ -327,6 +327,17 @@
 
 # SmartGatewayPrefix ::/0
 
+# Specify a list of IPv4 and/or IPv6 addresses and/or ranges to
+# never pick as gateway. Useful if you know that specific gateways are
+# overcrowded or actively advertising a broken uplink.
+
+# SmartGatewayBlacklist {
+#    10.20.30.40
+#    50.60.0.0/16
+#    caff:eeba:be::42
+#    2000:3000::/64
+# }
+
 ##############################
 ### OLSR protocol settings ###
 ##############################

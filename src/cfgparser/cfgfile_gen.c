@@ -952,6 +952,19 @@ void olsrd_write_cnf_autobuf_uncached(struct autobuf *out, struct olsrd_config *
   }
   abuf_appendf(out,
     "\n"
+    "# Specify a list of IPv4 and/or IPv6 addresses and/or ranges to\n"
+    "# never pick as gateway. Useful if you know that specific gateways are\n"
+    "# overcrowded or actively advertising a broken uplink. One entry per line,\n"
+    "# each entry can take one of four forms:\n"
+    "#    10.20.30.40\n"
+    "#    50.60.0.0/16\n"
+    "#    caff:eeba:be::42\n"
+    "#    2000:3000::/64\n"
+    "\n"
+    "SmartGatewayBlacklist {\n"
+    "}\n");
+  abuf_appendf(out,
+    "\n"
     "##############################\n"
     "### OLSR protocol settings ###\n"
     "##############################\n"
